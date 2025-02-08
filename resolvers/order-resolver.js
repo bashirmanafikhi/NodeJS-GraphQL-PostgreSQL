@@ -18,7 +18,11 @@ module.exports = {
       },
     },
     Mutation: {
-      createOrder: async (_, { buyerId }, { models }) => {
+      createOrder: async (_, { buyerId }, { models, user }) => {
+        console.log(user);
+        if (user.dataValues.role == "SELLER") {
+          throw new Error(`Unauthorized,Sorry ${user.dataValues.username} Sellers cannot create orders`);
+        }
         return await models.Order.create({ buyerId });
       },
     },

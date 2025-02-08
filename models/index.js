@@ -8,9 +8,8 @@ const User = require("./user")(sequelize);
 const Product = require("./product")(sequelize);
 const Order = require("./order")(sequelize);
 const OrderItem = require("./order-item")(sequelize);
-const Item = require("./item")(sequelize);
 
-const models = { User, Product, Order, OrderItem, Item };
+const models = { User, Product, Order, OrderItem };
 
 // associate relationships
 Object.keys(models).forEach((modelName) => {
