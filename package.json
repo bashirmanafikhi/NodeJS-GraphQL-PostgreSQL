@@ -1,0 +1,29 @@
+{
+  "name": "NodeJS-GraphQL-PostgreSQL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bashirmanafikhi/NodeJS-GraphQL-PostgreSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bashirmanafikhi/NodeJS-GraphQL-PostgreSQL/issues"
+  },
+  "homepage": "https://github.com/bashirmanafikhi/NodeJS-GraphQL-PostgreSQL#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "nodemon": "^3.1.9",
+    "pg": "^8.13.1",
+    "sequelize": "^6.37.5"
+  }
+}
