@@ -1,32 +1,24 @@
-const { Item } = require('../models');
+
+const itemResolver = require("./item-resolver");
+const userResolver = require("./user-resolver");
+const productResolver = require("./product-resolver");
+const orderResolver = require("./order-resolver");
+const orderItemResolver = require("./order-item-resolver");
 
 const resolvers = {
   Query: {
-    items: async () => {
-      return await Item.findAll();
-    },
-    item: async (_, { id }) => {
-      return await Item.findByPk(id);
-    },
+    ...itemResolver.Query,
+    ...userResolver.Query,
+    ...productResolver.Query,
+    ...orderResolver.Query,
+    ...orderItemResolver.Query,
   },
   Mutation: {
-    createItem: async (_, { name, description }) => {
-      return await Item.create({ name, description });
-    },
-    updateItem: async (_, { id, name, description }) => {
-      const item = await Item.findByPk(id);
-      if (!item) throw new Error('Item not found');
-      item.name = name;
-      item.description = description;
-      await item.save();
-      return item;
-    },
-    deleteItem: async (_, { id }) => {
-      const item = await Item.findByPk(id);
-      if (!item) throw new Error('Item not found');
-      await item.destroy();
-      return item;
-    },
+    ...itemResolver.Mutation,
+    ...userResolver.Mutation,
+    ...productResolver.Mutation,
+    ...orderResolver.Mutation,
+    ...orderItemResolver.Mutation,
   },
 };
 

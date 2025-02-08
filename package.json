@@ -20,8 +20,11 @@
   "homepage": "https://github.com/bashirmanafikhi/NodeJS-GraphQL-PostgreSQL#readme",
   "dependencies": {
     "apollo-server-express": "^3.13.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "graphql": "^16.10.0",
+    "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.9",
     "pg": "^8.13.1",
     "sequelize": "^6.37.5"
