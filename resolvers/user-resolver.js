@@ -19,6 +19,9 @@ module.exports = {
     user: async (_, { id }, { models }) => {
       return await models.User.findByPk(id);
     },
+    getCurrentUser: (_, __, { models, user }) => {
+      return user.dataValues;
+    },
   },
   Mutation: {
     register: async (_, { username, email, password, role }, { models }) => {

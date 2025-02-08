@@ -14,6 +14,6 @@ module.exports = gql`
   }
 
   type Mutation {
-    createOrder(buyerId: ID!): Order
+    createOrder: Order
   }
 `;
