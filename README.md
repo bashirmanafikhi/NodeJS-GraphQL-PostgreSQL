@@ -28,28 +28,27 @@ Welcome to **NodeJS-GraphQL-PostgreSQL**, a backend application featuring **Grap
 Navigate to `http://localhost:4000/graphql` to interact with the API and test queries and mutations using GraphQL Playground.
 
 ---
-
 ## Queries & Mutations
 
 ### Queries
 
-- **`users`**: Fetch all users.
-- **`user(id: ID!)`**: Fetch a user by ID.
-- **`products`**: Fetch all products.
-- **`product(id: ID!)`**: Fetch a product by ID.
-- **`orders`**: Fetch all orders with their products.
-- **`order(id: ID!)`**: Fetch a specific order.
-- **`orderItems`**: Fetch all order items.
-- **`orderItem(id: ID!)`**: Fetch a specific order item.
+- `users`: Fetch all users.
+- `user(id: ID!)`: Fetch a specific user by ID.
+- `getCurrentUser`: Fetch the currently authenticated user.
+- `products`: Fetch all products.
+- `product(id: ID!)`: Fetch a specific product by ID.
+- `orders`: Fetch all orders.
+- `order(id: ID!)`: Fetch a specific order by ID.
+- `orderItems`: Fetch all order items.
+- `orderItem(id: ID!)`: Fetch a specific order item by ID.
 
 ### Mutations
 
-- **`register(username: String!, email: String!, password: String!, role: String!)`**: Register a new user.
-- **`login(email: String!, password: String!)`**: Log in and receive a JWT token for authentication.
-- **`createProduct(name: String!, price: Float!, stock: Int!, ownerId: ID!)`**: Create a new product (SELLERS only).
-- **`createOrder(buyerId: ID!)`**: Place a new order (BUYERS only).
-- **`addItemToOrder(orderId: ID!, productId: ID!, quantity: Int!, price: Float!)`**: Add a product to an order.
-
+- `register(username: String!, email: String!, password: String!, role: String!)`: Register a new user.
+- `login(email: String!, password: String!)`: Log in and receive a JWT token.
+- `createProduct(name: String!, price: Float!, stock: Int!)`: Add a new product. (SELLERS only).
+- `createOrder`: Create a new order for the authenticated user. (BUYERS only).
+- `addItemToOrder(orderId: ID!, productId: ID!, quantity: Int!, price: Float!)`: Add an item to an existing order.
 ---
 
 ## Authentication & Authorization
