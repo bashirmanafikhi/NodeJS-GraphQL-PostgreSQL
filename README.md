@@ -1,6 +1,6 @@
 # NodeJS-GraphQL-PostgreSQL
 
-Welcome to **NodeJS-GraphQL-PostgreSQL**, a full-stack application featuring **GraphQL API** for managing products, orders, and users. With **user authentication**, **authorization** based on roles, and an exciting database-backed system, this app is designed to help you build, manage, and interact with e-commerce-like data effortlessly. 🚀
+Welcome to **NodeJS-GraphQL-PostgreSQL**, a backend application featuring **GraphQL API** for managing products, orders, and users. With **user authentication**, **authorization** based on roles, and an exciting database-backed system, this app is designed to help you build, manage, and interact with e-commerce-like data effortlessly. 🚀
 
 ---
 
